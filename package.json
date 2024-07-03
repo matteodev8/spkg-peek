@@ -1,6 +1,6 @@
 {
   "name": "spkg-peek",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "API for spkg repositories",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Strawberry-Foundations/spkg-peek#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "serve-favicon": "^2.5.0",
     "sqlite3": "^5.1.7"

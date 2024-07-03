@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const favicon = require('serve-favicon');
@@ -34,6 +35,7 @@ if (JSON.stringify(originalConfig) !== JSON.stringify(config)) {
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const port = config.port;
 
