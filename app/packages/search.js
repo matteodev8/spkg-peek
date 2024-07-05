@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     }
     
     const sql = `
-        SELECT name, version, branch, arch, url, specfile, filename
+        SELECT name, version, branch, arch, specfile, binpkg_url, srcpkg_url, metadata
         FROM packages
         WHERE name LIKE ?
     `;

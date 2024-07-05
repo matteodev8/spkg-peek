@@ -8,13 +8,13 @@ router.get('/', (req, res) => {
 
     if (!query || query.trim() === '') {
         sql = `
-            SELECT name, version, branch, arch, url, specfile, filename
+            SELECT name, version, branch, arch, specfile, binpkg_url, srcpkg_url, metadata
             FROM packages
         `;
         params = [];
     } else {
         sql = `
-            SELECT name, version, branch, arch, url, specfile, filename
+            SELECT name, version, branch, arch, specfile, binpkg_url, srcpkg_url, metadata
             FROM packages
             WHERE name = ?
         `;
